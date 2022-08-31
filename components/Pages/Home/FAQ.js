@@ -1,39 +1,40 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Stack from "@mui/material/Stack";
-import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import BorderedBottomBox from "../../Wrapper/BorderBottomBox";
-import { styled } from "@mui/material/styles";
-import { useState } from "react";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Container from "@mui/material/Container"
+import Typography from "@mui/material/Typography"
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import BorderedBottomBox from "../../Wrapper/BorderedBottomBox"
+import { styled } from '@mui/material/styles'
+import { useState } from "react"
+import AddIcon from '@mui/icons-material/Add'
 
 const CustomAccordion = styled(Accordion)(({ theme }) => ({
   backgroundColor: theme.palette.grey[900],
-  color: theme.palette.common.white,
-}));
+  color: theme.palette.common.white
+}))
 
 const CustomAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
   borderBottom: `1px solid ${theme.palette.common.black}`,
   padding: theme.spacing(1, 3),
-  "&.Mui-expanded": {
+  '&.Mui-expanded': {
     padding: theme.spacing(0, 3),
-  },
-}));
+  }
+}))
 
 const FAQ = () => {
-  const [activeItem, setActiveItem] = useState(false);
+  const [activeItem, setActiveItem] = useState(false)
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setActiveItem(isExpanded ? panel : false);
-  };
+    setActiveItem(isExpanded ? panel : false)
+  }
 
   return (
     <BorderedBottomBox>
+
       <Container maxWidth="md" sx={{ py: 6 }}>
         <Typography
           variant="h3"
@@ -45,39 +46,31 @@ const FAQ = () => {
           Frequently Asked Questions
         </Typography>
         <Stack spacing={1} mb={8}>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel1"}
-            onChange={handleChange("panel1")}
-          >
-            <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Typography variant="h5">What is Netflix?</Typography>
-            </CustomAccordionSummary>
-            <AccordionDetails>
-              <Typography variant="h5" mb={4}>
-                Netflix is a streaming service that offers a wide variety of
-                award-winning TV shows, movies, anime, documentaries, and more
-                on thousands of internet-connected devices.
-              </Typography>
-              <Typography variant="h5">
-                You can watch as much as you want, whenever you want without a
-                single commercial – all for one low monthly price. There is
-                always something new to discover and new TV shows and movies are
-                added every week!
-              </Typography>
-            </AccordionDetails>
+          <CustomAccordion square expanded={activeItem === 'panel1'} onChange={handleChange('panel1')}>
+              <CustomAccordionSummary
+                expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <Typography variant="h5">What is Netflix?</Typography>
+              </CustomAccordionSummary>
+              <AccordionDetails>
+                <Typography variant="h5" mb={4}>
+                  Netflix is a streaming service that offers a wide variety of
+                  award-winning TV shows, movies, anime, documentaries, and more on
+                  thousands of internet-connected devices.
+                </Typography>
+                <Typography variant="h5">
+                  You can watch as much as you want, whenever you want without a
+                  single commercial – all for one low monthly price. There is
+                  always something new to discover and new TV shows and movies are
+                  added every week!
+                </Typography>
+              </AccordionDetails>
           </CustomAccordion>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel2"}
-            onChange={handleChange("panel2")}
-          >
+          <CustomAccordion square expanded={activeItem === 'panel2'} onChange={handleChange('panel2')}>
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
+              expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
               aria-controls="panel2-content"
               id="panel2-header"
             >
@@ -92,13 +85,9 @@ const FAQ = () => {
               </Typography>
             </AccordionDetails>
           </CustomAccordion>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel3"}
-            onChange={handleChange("panel3")}
-          >
+          <CustomAccordion square expanded={activeItem === 'panel3'} onChange={handleChange('panel3')}>
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
+              expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
               aria-controls="panel3-content"
               id="panel3-header"
             >
@@ -120,13 +109,9 @@ const FAQ = () => {
               </Typography>
             </AccordionDetails>
           </CustomAccordion>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel4"}
-            onChange={handleChange("panel4")}
-          >
+          <CustomAccordion square expanded={activeItem === 'panel4'} onChange={handleChange('panel4')}>
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
+              expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
               aria-controls="panel4-content"
               id="panel4-header"
             >
@@ -141,13 +126,9 @@ const FAQ = () => {
               </Typography>
             </AccordionDetails>
           </CustomAccordion>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel5"}
-            onChange={handleChange("panel5")}
-          >
+          <CustomAccordion square expanded={activeItem === 'panel5'} onChange={handleChange('panel5')}>
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
+              expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
               aria-controls="panel5-content"
               id="panel5-header"
             >
@@ -161,13 +142,9 @@ const FAQ = () => {
               </Typography>
             </AccordionDetails>
           </CustomAccordion>
-          <CustomAccordion
-            square
-            expanded={activeItem === "panel6"}
-            onChange={handleChange("panel6")}
-          >
+          <CustomAccordion square expanded={activeItem === 'panel6'} onChange={handleChange('panel6')}>
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
+              expandIcon={<AddIcon sx={{ color: 'common.white', fontSize: 48 }} />}
               aria-controls="panel6-content"
               id="panel6-header"
             >
@@ -197,28 +174,31 @@ const FAQ = () => {
           Ready to watch? Enter your email to create or restart your membership.
         </Typography>
         <Grid container>
-          <Grid item xs>
-            <TextField
-              variant="filled"
-              label="Email address"
-              fullWidth
-              sx={{ bgcolor: "common.white" }}
-            />
+            <Grid item xs>
+              <TextField
+                variant="filled"
+                label="Email address"
+                fullWidth
+                sx={{ bgcolor: 'common.white' }}
+              />
+            </Grid>
+            <Grid item xs="auto">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ height: '100%', borderRadius: '2px'}}
+              >
+                Get started
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs="auto">
-            <Button
-              variant="contained"
-              size="large"
-              color="primary"
-              sx={{ height: "100%", borderRadius: "2px" }}
-            >
-              Get started
-            </Button>
-          </Grid>
-        </Grid>
       </Container>
-    </BorderedBottomBox>
-  );
-};
 
-export default FAQ;
+
+
+    </BorderedBottomBox>
+  )
+}
+
+export default FAQ

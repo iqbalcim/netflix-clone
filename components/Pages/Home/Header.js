@@ -1,25 +1,26 @@
-import React from "react";
-import Image from "next/image";
-import Box from "@mui/material/Box";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import BorderedBottomBox from "../../Wrapper/BorderBottomBox";
+import React from 'react'
+import Image from 'next/image'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import BorderedBottomBox from '../../Wrapper/BorderedBottomBox'
 
 const Header = ({ OpenModal }) => {
   return (
     <BorderedBottomBox>
+
       <AppBar
         sx={{
-          bgcolor: "transparent",
-          padding: "25px 20px",
-          position: "absolute",
+          backgroundColor: 'transparent',
+          padding: '25px 20px',
+          position: 'absolute'
         }}
         elevation={0}
       >
@@ -27,7 +28,6 @@ const Header = ({ OpenModal }) => {
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs>
               <Image
-                priority
                 src="/__images/netflix.svg"
                 height="45px"
                 width="167px"
@@ -42,16 +42,16 @@ const Header = ({ OpenModal }) => {
                 size="small"
                 defaultValue="EN"
                 sx={{
-                  borderWidth: "2px",
-                  borderStyle: "solid",
-                  borderColor: "common.white",
-                  color: "common.white",
-                  "& .MuiSelect-icon": {
-                    color: "common.white",
+                  borderWidth: '2px',
+                  borderStyle: 'solid',
+                  borderColor: 'common.white',
+                  color: 'common.white',
+                  '& .MuiSelect-icon': {
+                    color: 'common.white'
                   },
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    border: "none",
-                  },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    border: 'none'
+                  }
                 }}
               >
                 <MenuItem value="ID">Bahasa Indonesia</MenuItem>
@@ -69,35 +69,36 @@ const Header = ({ OpenModal }) => {
 
       <Box
         sx={{
-          position: "relative",
-          height: "745px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          "&::after": {
-            position: "absolute",
+          position: 'relative',
+          height: '745px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          '&::after': {
+            position: 'absolute',
             content: '""',
-            width: "100%",
-            height: "100%",
+            width: '100%',
+            height: '100%',
             top: 0,
             left: 0,
-            background: "rgba(0,0,0,0.4)",
+            background: 'rgba(0, 0, 0, 0.4)',
             backgroundImage: `linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0.6) 0%,
-                rgba(0, 0, 0, 0) 60%,
-                rgba(0, 0, 0, 0.8) 100%
-            )`,
-          },
+              to bottom,
+              rgba(0, 0, 0, 0.6) 0,
+              rgba(0, 0, 0, 0) 60%,
+              rgba(0, 0, 0, 0.8) 100%
+            )`
+          }
         }}
       >
         <Image
+          priority
           src="/__images/backdrop.jpg"
           layout="fill"
           objectFit="cover"
           alt="Backdrop Netflix"
         />
-        <Container maxWidth="md" sx={{ position: "relative", zIndex: 1000 }}>
+        <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1000 }}>
           <Typography
             variant="h2"
             component="h1"
@@ -105,7 +106,7 @@ const Header = ({ OpenModal }) => {
             fontWeight="600"
             textAlign="center"
           >
-            Unlimited movies, TV <br /> shows, and more.
+            Unlimited movies, TV shows, and more.
           </Typography>
           <Typography
             variant="h5"
@@ -123,8 +124,7 @@ const Header = ({ OpenModal }) => {
             textAlign="center"
             sx={{ my: 3 }}
           >
-            Ready to watch? Enter your email to create or restart your
-            membership.
+            Ready to watch? Enter your email to create or restart your membership.
           </Typography>
           <Grid container>
             <Grid item xs>
@@ -132,7 +132,7 @@ const Header = ({ OpenModal }) => {
                 variant="filled"
                 label="Email address"
                 fullWidth
-                sx={{ bgcolor: "common.white" }}
+                sx={{ bgcolor: 'common.white' }}
               />
             </Grid>
             <Grid item xs="auto">
@@ -140,16 +140,17 @@ const Header = ({ OpenModal }) => {
                 variant="contained"
                 size="large"
                 color="primary"
-                sx={{ height: "100%", borderRadius: "2px" }}
+                sx={{ height: '100%', borderRadius: '2px'}}
               >
-                Get Started
+                Get started
               </Button>
             </Grid>
           </Grid>
         </Container>
       </Box>
-    </BorderedBottomBox>
-  );
-};
 
-export default Header;
+    </BorderedBottomBox>
+  )
+}
+
+export default Header

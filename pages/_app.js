@@ -1,22 +1,28 @@
-import { ThemeProvider } from "@mui/material/styles";
-import Head from "next/head";
-import CssBaseline from "@mui/material/CssBaseline";
-import theme from "../utils/theme";
-import "../styles/globals.css";
+import Head from 'next/head'
+import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { CacheProvider } from '@emotion/react'
+import theme from '../utils/theme'
+import createEmotionCache from '../utils/createEmotionCache'
+import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
+const clientSideEmotionCache = createEmotionCache();
+
+function MyApp(props) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
   return (
-    <div>
+    <CacheProvider value={emotionCache}>
       <Head>
         <title>Netflix - MUI</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
-    </div>
-  );
+    </CacheProvider>
+  )
 }
 
-export default MyApp;
+export default MyApp
+

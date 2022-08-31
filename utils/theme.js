@@ -1,20 +1,20 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
+import { red } from '@mui/material/colors'
 
 const base = createTheme({
   palette: {
     primary: {
-      main: "#E50914",
+      main: '#E50914',
     },
     secondary: {
-      main: "#ffffff",
+      main: '#FFFFFF',
     },
     error: {
-      main: red[400],
-    },
-  },
-});
+      main: red[400]
+    }
+  }
+})
 
-const theme = responsiveFontSizes(base);
+const theme = responsiveFontSizes(base)
 
-export default theme;
+export default theme
