@@ -51,7 +51,7 @@ const FAQ = () => {
             onChange={handleChange("panel1")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel1-content"
               id="panel1-header"
             >
@@ -77,7 +77,7 @@ const FAQ = () => {
             onChange={handleChange("panel2")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel2-content"
               id="panel2-header"
             >
@@ -98,7 +98,7 @@ const FAQ = () => {
             onChange={handleChange("panel3")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel3-content"
               id="panel3-header"
             >
@@ -126,7 +126,7 @@ const FAQ = () => {
             onChange={handleChange("panel4")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel4-content"
               id="panel4-header"
             >
@@ -147,7 +147,7 @@ const FAQ = () => {
             onChange={handleChange("panel5")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel5-content"
               id="panel5-header"
             >
@@ -167,7 +167,7 @@ const FAQ = () => {
             onChange={handleChange("panel6")}
           >
             <CustomAccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "common.white" }} />}
               aria-controls="panel6-content"
               id="panel6-header"
             >
