@@ -10,11 +10,11 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { grey } from "@mui/material/colors";
+import BorderedBottomBox from "../../Wrapper/BorderBottomBox";
 
 const Header = () => {
   return (
-    <Box sx={{ borderBottom: `8px solid ${grey[900]}` }}>
+    <BorderedBottomBox>
       <AppBar
         sx={{
           bgcolor: "transparent",
@@ -148,7 +148,7 @@ const Header = () => {
           </Grid>
         </Container>
       </Box>
-    </Box>
+    </BorderedBottomBox>
   );
 };
 

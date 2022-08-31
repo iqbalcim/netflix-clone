@@ -102,7 +102,7 @@ const Features = () => {
                     position: "absolute",
                     bgcolor: "common.black",
                     zIndex: 2,
-                    border: `2px solid ${grey[500]}`,
+                    border: `2px solid ${grey[700]}`,
                     borderRadius: 2,
                     p: 1,
                     width: {
